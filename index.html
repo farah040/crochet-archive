@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Rukn Farah</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+
+    <script>
+        function openModal(id) {
+            document.getElementById(id).style.display = "flex";
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).style.display = "none"
+        }
+
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if(event.target === modal) {
+                    modal.style.display = "none"
+                }
+            })
+        }
+    </script>
+
+    <body>
+        <header>
+            <div class="brand-circle">
+                <img src="./images/logo.png" alt="Rukn Farah Logo" class="logo" />
+                <h1>Rukn Farah</h1>
+            </div>
+            <p>Welcome to my magic corner, where every stitch tells a story</p>
+        </header>
+
+        <main class="gallery">
+            <div class="card" onclick="openModal('modal-chick')">
+                <img src="./images/cards/chick.png" alt="Amigurumi cute chick with purple bow">
+                <div class="card-text">
+                    <div class="tags">
+                        <span>#animals</span>
+                        <span>#keychains</span>
+                        <span>#yellow</span>
+                    </div>
+                </div>
+            </div>
+            <div id="modal-chick" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal('modal-chick')">&times;</span>
+                    
+                </div>
+            </div>
+            <div class="card" onclick="openModal('')">
+                <img src="./images/cards/bee.png" alt="Amigurumi bee with an amigurumi heart">
+                <div class="card-text">
+                    <div class="tags">
+                        <span>#animals</span>
+                        <span>#keychains</span>
+                        <span>#yellow</span>
+                        <span>#heart</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="openModal('')">
+                <img src="./images/cards/sun-earth.png" alt="Amigurumi sun with amigurumi earth as couples keychains">
+                <div class="card-text">
+                    <div class="tags">
+                        <span>#keychains</span>
+                        <span>#couples</span>
+                        <span>#yellow</span>
+                        <span>#blue</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="openModal('')">
+                <img src="./images/cards/bonbon.png" alt="Amigurumi hello kitty wraped as a kandy">
+                <div class="card-text">
+                    <div class="tags">
+                        <span>#animals</span>
+                        <span>#keychains</span>
+                        <span>#pink</span>
+                        <span>#characters</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="openModal('')">
+                <img src="./images/cards/cactus.png" alt="Amigurumi cactus keychain">
+                <div class="card-text">
+                    <div class="tags">
+                        <span>#plants</span>
+                        <span>#keychains</span>
+                        <span>#green</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="openModal('')">
+                <img src="./images/cards/couple-bears.png" alt="Amigurumi blue bear and pink bear for couples holding hearts">
+                <div class="card-text">
+                    <div class="tags">
+                        <span>#couples</span>
+                        <span>#keychains</span>
+                        <span>#blue</span>
+                        <span>#pink</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="openModal('')">
+                <img src="./images/cards/hedgehog.png" alt="Amigurumi cute hedgehog">
+                <div class="card-text">
+                    <div class="tags">
+                        <span>#animals</span>
+                        <span>#keychains</span>
+                        <span>#brown</span>
+                    </div>
+                </div>
+            </div>
+            <div class="card" onclick="openModal('')">
+                <img src="./images/cards/owl.png" alt="Amigurumi cute pink owl">
+                <div class="card-text">
+                    <div class="tags">
+                        <span>#animals</span>
+                        <span>#keychains</span>
+                        <span>#pink</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <p>Made with love by Farah</p>
+            <p>&copy; All rights reserved.</p>
+            <p>Follow me on 
+                <a href="https://www.instagram.com/rukn_farah" target="_blank">Instagram</a>
+            </p>
+        </footer>
+    </body>
+</html>
+
