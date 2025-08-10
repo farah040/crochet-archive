@@ -8,14 +8,14 @@ window.addEventListener('click', (event) => {
 })
 
 const cards = {
-    'modal-chick': ['images/cards/chick.webp', 'images/cards/chick2.webp'],
-    'modal-bee': ['images/cards/bee.webp'],
-    'modal-bonbon': ['images/cards/bonbon.webp'],
-    'modal-cactus': ['images/cards/cactus.webp'],
-    'modal-couple-bears': ['images/cards/couple-bears.webp'],
-    'modal-hedgehog': ['images/cards/hedgehog.webp'],
-    'modal-owl': ['images/cards/owl.webp'],
-    'modal-sun-earth': ['images/cards/sun-earth.webp'],
+    'chick': ['images/cards/chick.webp', 'images/cards/chick2.webp'],
+    'bee': ['images/cards/bee.webp', 'images/cards/bee2.webp'],
+    'bonbon': ['images/cards/bonbon.webp', 'images/cards/bonbon2.webp'],
+    'cactus': ['images/cards/cactus.webp'],
+    'couple-bears': ['images/cards/couple-bears.webp'],
+    'hedgehog': ['images/cards/hedgehog.webp', 'images/cards/hedgehog2.webp'],
+    'owl': ['images/cards/owl.webp'],
+    'sun-earth': ['images/cards/sun-earth.webp'],
 }
 
 let images = []

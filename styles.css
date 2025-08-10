@@ -166,16 +166,10 @@ header p {
     cursor: pointer;
     border-radius: 50%;
     user-select: none;
+    -webkit-tap-highlight-color: transparent; 
     transform: translateY(-50%);
     font-size: 1.3rem;
     color: var(--color-charcoal-olive);
-}
-
-@media (max-width: 600px) {
-    .nav-btn {
-        padding: 0.5rem;
-        font-size: 1rem;
-    }
 }
 
 .prev {
@@ -194,6 +188,43 @@ header p {
     color: var(--color-charcoal-olive);
     cursor: pointer;
     user-select: none;
+    z-index: 10000;
+}
+
+@media (max-width: 600px) {
+    .modal-content {
+        width: 95vw;
+        height: 75vh;         
+        padding: 0.6rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .images {
+        width: 100%;
+        flex-grow: 1;         
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #modalImage {
+        border-radius: 0.8rem;
+    }
+
+    .nav-btn {
+        padding: 0.6rem;
+        font-size: 1.2rem;
+    }
+
+    .nav-btn.prev {
+        left: 5px;
+    }
+
+    .nav-btn.next {
+        right: 5px;
+    }
 }
 
 footer {
