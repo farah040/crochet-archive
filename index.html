@@ -7,25 +7,6 @@
         <link rel="stylesheet" href="styles.css" />
     </head>
 
-    <script>
-        function openModal(id) {
-            document.getElementById(id).style.display = "flex";
-        }
-
-        function closeModal(id) {
-            document.getElementById(id).style.display = "none"
-        }
-
-        window.onclick = function(event) {
-            const modals = document.querySelectorAll('.modal');
-            modals.forEach(modal => {
-                if(event.target === modal) {
-                    modal.style.display = "none"
-                }
-            })
-        }
-    </script>
-
     <body>
         <header>
             <div class="brand-circle">
@@ -36,7 +17,7 @@
         </header>
 
         <main class="gallery">
-            <div class="card" onclick="openModal('modal-chick')">
+            <div class="card" data-modal="modal-chick">
                 <img src="./images/cards/chick.webp" alt="Amigurumi cute chick with purple bow">
                 <div class="card-text">
                     <div class="tags">
@@ -46,13 +27,21 @@
                     </div>
                 </div>
             </div>
-            <div id="modal-chick" class="modal">
+            <div id="modal" class="modal">
                 <div class="modal-content">
-                    <span class="close" onclick="closeModal('modal-chick')">&times;</span>
-                    
+                    <span id="closeBtn">&times;</span>
+
+                    <div class="images">
+                        <img id="modalImage" src="/images/cards/bee.webp" alt="Amigurumi toy photo">
+
+                        <button id="prevBtn" class="nav-btn prev">&#10094</button>
+                        <button id="nextBtn" class="nav-btn next">&#10095</button>
+                    </div>
+
                 </div>
             </div>
-            <div class="card" onclick="openModal('')">
+
+            <div class="card" data-modal="modal-bee">
                 <img src="./images/cards/bee.webp" alt="Amigurumi bee with an amigurumi heart">
                 <div class="card-text">
                     <div class="tags">
@@ -63,7 +52,21 @@
                     </div>
                 </div>
             </div>
-            <div class="card" onclick="openModal('')">
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span id="closeBtn">&times;</span>
+
+                    <div class="images">
+                        <img id="modalImage" src="" alt="Amigurumi toy photo">
+
+                        <button id="prevBtn" class="nav-btn prev">&#10094</button>
+                        <button id="nextBtn" class="nav-btn next">&#10095</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="card" data-modal="modal-sun-earth">
                 <img src="./images/cards/sun-earth.webp" alt="Amigurumi sun with amigurumi earth as couples keychains">
                 <div class="card-text">
                     <div class="tags">
@@ -74,7 +77,21 @@
                     </div>
                 </div>
             </div>
-            <div class="card" onclick="openModal('')">
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span id="closeBtn">&times;</span>
+
+                    <div class="images">
+                        <img id="modalImage" src="" alt="Amigurumi toy photo">
+
+                        <button id="prevBtn" class="nav-btn prev">&#10094</button>
+                        <button id="nextBtn" class="nav-btn next">&#10095</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="card" data-modal="modal-bonbon">
                 <img src="./images/cards/bonbon.webp" alt="Amigurumi hello kitty wraped as a kandy">
                 <div class="card-text">
                     <div class="tags">
@@ -85,7 +102,21 @@
                     </div>
                 </div>
             </div>
-            <div class="card" onclick="openModal('')">
+             <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span id="closeBtn">&times;</span>
+
+                    <div class="images">
+                        <img id="modalImage" src="" alt="Amigurumi toy photo">
+
+                        <button id="prevBtn" class="nav-btn prev">&#10094</button>
+                        <button id="nextBtn" class="nav-btn next">&#10095</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="card" data-modal="modal-cactus">
                 <img src="./images/cards/cactus.webp" alt="Amigurumi cactus keychain">
                 <div class="card-text">
                     <div class="tags">
@@ -95,7 +126,21 @@
                     </div>
                 </div>
             </div>
-            <div class="card" onclick="openModal('')">
+             <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span id="closeBtn">&times;</span>
+
+                    <div class="images">
+                        <img id="modalImage" src="" alt="Amigurumi toy photo">
+
+                        <button id="prevBtn" class="nav-btn prev">&#10094</button>
+                        <button id="nextBtn" class="nav-btn next">&#10095</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="card" data-modal="modal-couple-bears">
                 <img src="./images/cards/couple-bears.webp" alt="Amigurumi blue bear and pink bear for couples holding hearts">
                 <div class="card-text">
                     <div class="tags">
@@ -106,7 +151,21 @@
                     </div>
                 </div>
             </div>
-            <div class="card" onclick="openModal('')">
+             <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span id="closeBtn">&times;</span>
+
+                    <div class="images">
+                        <img id="modalImage" src="" alt="Amigurumi toy photo">
+
+                        <button id="prevBtn" class="nav-btn prev">&#10094</button>
+                        <button id="nextBtn" class="nav-btn next">&#10095</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="card" data-modal="modal-hedgehog">
                 <img src="./images/cards/hedgehog.webp" alt="Amigurumi cute hedgehog">
                 <div class="card-text">
                     <div class="tags">
@@ -116,7 +175,21 @@
                     </div>
                 </div>
             </div>
-            <div class="card" onclick="openModal('')">
+             <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span id="closeBtn">&times;</span>
+
+                    <div class="images">
+                        <img id="modalImage" src="" alt="Amigurumi toy photo">
+
+                        <button id="prevBtn" class="nav-btn prev">&#10094</button>
+                        <button id="nextBtn" class="nav-btn next">&#10095</button>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="card" data-modal="modal-owl">
                 <img src="./images/cards/owl.webp" alt="Amigurumi cute pink owl">
                 <div class="card-text">
                     <div class="tags">
@@ -124,6 +197,19 @@
                         <span>#keychains</span>
                         <span>#pink</span>
                     </div>
+                </div>
+            </div>
+             <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span id="closeBtn">&times;</span>
+
+                    <div class="images">
+                        <img id="modalImage" src="" alt="Amigurumi toy photo">
+
+                        <button id="prevBtn" class="nav-btn prev">&#10094</button>
+                        <button id="nextBtn" class="nav-btn next">&#10095</button>
+                    </div>
+
                 </div>
             </div>
         </main>
@@ -135,6 +221,8 @@
                 <a href="https://www.instagram.com/rukn_farah" target="_blank">Instagram</a>
             </p>
         </footer>
+
+        <script src="script.js"></script>
     </body>
 </html>
 
