@@ -45,11 +45,15 @@ const cards = {
     'chick': ['images/cards/chick.webp', 'images/cards/chick2.webp'],
     'bee': ['images/cards/bee.webp', 'images/cards/bee2.webp'],
     'bonbon': ['images/cards/bonbon.webp', 'images/cards/bonbon2.webp'],
+    'girrafe': ['images/cards/girrafe.webp', 'images/cards/girrafe2.webp'],
     'cactus': ['images/cards/cactus.webp'],
     'couple-bears': ['images/cards/couple-bears.webp'],
     'hedgehog': ['images/cards/hedgehog.webp', 'images/cards/hedgehog2.webp'],
     'owl': ['images/cards/owl.webp'],
     'sun-earth': ['images/cards/sun-earth.webp'],
+    'lamp': ['images/cards/lamp.webp', 'images/cards/lamp2.webp'],
+    'cat': ['images/cards/cat.webp', 'images/cards/cat2.webp', 'images/cards/cat3.webp'],
+    'angry-chick': ['images/cards/angry-chick.webp']
 }
 
 let images = []
