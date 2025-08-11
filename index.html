@@ -16,8 +16,29 @@
             <p>Welcome to my magic corner, where every stitch tells a story</p>
         </header>
 
-        <main class="gallery">
-            <div class="card" data-modal="chick">
+        <main>
+            <div class="filters">
+                <div class="main-filters">
+                    <button class="filter-button active" data-filter="all" data-type="category">All</button>
+                    <button class="filter-button" data-filter="animal" data-type="category">Animals</button>
+                    <button class="filter-button" data-filter="plant" data-type="category">Plants</button>
+                    <button class="filter-button" data-filter="character" data-type="category">Characters</button>
+                    <button class="filter-button" data-filter="couples" data-type="category">Couples</button>
+                    <button class="filter-button" data-filter="keychain" data-type="category">Keychains</button>
+                </div>
+
+                <div class="color-filters">
+                    <button class="filter-button color-button yellow" data-filter="yellow" data-type="color" aria-label="yellow"></button>
+                    <button class="filter-button color-button pink" data-filter="pink" data-type="color" aria-label="pink"></button>
+                    <button class="filter-button color-button green" data-filter="green" data-type="color" aria-label="green"></button>
+                    <button class="filter-button color-button blue" data-filter="blue" data-type="color" aria-label="blue"></button>
+                    <button class="filter-button color-button white" data-filter="white" data-type="color" aria-label="white"></button>
+                    <button class="filter-button color-button brown" data-filter="brown" data-type="color" aria-label="brown"></button>
+                </div>
+            </div>
+
+            <div class="gallery">
+            <div class="card" data-modal="chick", data-tags="animal,keychain,yellow">
                 <img src="images/cards/chick.webp" alt="Amigurumi cute chick with purple bow">
                 <div class="card-text">
                     <div class="tags">
@@ -41,7 +62,7 @@
                 </div>
             </div>
 
-            <div class="card" data-modal="bee">
+            <div class="card" data-modal="bee" data-tags="animal,keychain,yellow">
                 <img src="images/cards/bee.webp" alt="Amigurumi bee with an amigurumi heart">
                 <div class="card-text">
                     <div class="tags">
@@ -53,7 +74,7 @@
                 </div>
             </div>
 
-            <div class="card" data-modal="sun-earth">
+            <div class="card" data-modal="sun-earth", data-tags="keychain,couples,yellow,blue">
                 <img src="images/cards/sun-earth.webp" alt="Amigurumi sun with amigurumi earth as couples keychains">
                 <div class="card-text">
                     <div class="tags">
@@ -65,7 +86,7 @@
                 </div>
             </div>
 
-            <div class="card" data-="bonbon">
+            <div class="card" data-modal="bonbon" data-tags="keychain,pink,character">
                 <img src="images/cards/bonbon.webp" alt="Amigurumi hello kitty wraped as a kandy">
                 <div class="card-text">
                     <div class="tags">
@@ -77,7 +98,7 @@
                 </div>
             </div>
 
-            <div class="card" data-modal="cactus">
+            <div class="card" data-modal="cactus" data-tags="plant,keychain,green">
                 <img src="images/cards/cactus.webp" alt="Amigurumi cactus keychain">
                 <div class="card-text">
                     <div class="tags">
@@ -88,7 +109,7 @@
                 </div>
             </div>
 
-            <div class="card" data-modal="couple-bears">
+            <div class="card" data-modal="couple-bears" data-tags="couples,keychain,blue,pink">
                 <img src="images/cards/couple-bears.webp" alt="Amigurumi blue bear and pink bear for couples holding hearts">
                 <div class="card-text">
                     <div class="tags">
@@ -100,7 +121,7 @@
                 </div>
             </div>
 
-            <div class="card" data-modal="hedgehog">
+            <div class="card" data-modal="hedgehog" data-tags="animal,keychain,brown">
                 <img src="images/cards/hedgehog.webp" alt="Amigurumi cute hedgehog">
                 <div class="card-text">
                     <div class="tags">
@@ -111,7 +132,7 @@
                 </div>
             </div>
 
-            <div class="card" data-modal="owl">
+            <div class="card" data-modal="owl" data-tags="animal,keychain,pink">
                 <img src="images/cards/owl.webp" alt="Amigurumi cute pink owl">
                 <div class="card-text">
                     <div class="tags">
@@ -121,7 +142,9 @@
                     </div>
                 </div>
             </div>
+            </div>
         </main>
+        
 
         <footer>
             <p>Made with love by Farah</p>

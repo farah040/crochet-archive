@@ -1,3 +1,37 @@
+const filterButtons = document.querySelectorAll('.filter-button');
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        const cards = document.querySelectorAll('.card');
+        let visibleCount = 0;
+
+        cards.forEach(card => {
+            card.style.display = 'block';
+            const tagsString = card.getAttribute('data-tags');
+            const tagsArray = tagsString.split(',');
+
+            const selected = button.getAttribute('data-filter');
+
+            const show = (selected === 'all') || tagsArray.includes(selected);
+            card.style.display = show ? 'block' : 'none';
+
+            if(show) {
+                visibleCount++;
+            }
+        });
+
+        const gallery = document.querySelector('.gallery');if(visibleCount === 1) {
+            gallery.classList.add('single-card');
+        }
+        else {
+            gallery.classList.remove('single-card');
+        }
+    });
+});
+
 window.addEventListener('click', (event) => {
     const modals = document.querySelectorAll('.modal');
     modals.forEach(modal => {

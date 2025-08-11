@@ -6,5 +6,5 @@ This project serves as a personal digital archive for crochet creations, providi
 
 - Responsive gallery layout with grid system
 - Modal popups for viewing multiple project images
-- Tag-based categorization for easy browsing (planned)
+- Tag-based categorization for easy browsing 
 - Mobile-optimized user experience 
