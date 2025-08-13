@@ -75,6 +75,11 @@ function showImage(index) {
 function openModal(projectPhotos, startIndex = 0) {
     images = projectPhotos;
 
+    images.forEach(src => {
+        const img = new Image();
+        img.src = src;
+    });
+
     nextBtn.style.display = '';
     prevBtn.style.display = '';
 
@@ -106,7 +111,7 @@ document.querySelectorAll('.card').forEach(card => {
             openModal(cards[modalKey]);
         }
         else {
-            console.warn(`No images found for moday key: ${modalKey}`);
+            console.warn(`No images found for modal key: ${modalKey}`);
         }
     });
 });
