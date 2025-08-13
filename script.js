@@ -45,7 +45,7 @@ const cards = {
     'chick': ['images/cards/chick.webp', 'images/cards/chick2.webp'],
     'bee': ['images/cards/bee.webp', 'images/cards/bee2.webp'],
     'bonbon': ['images/cards/bonbon.webp', 'images/cards/bonbon2.webp'],
-    'girrafe': ['images/cards/girrafe.webp', 'images/cards/girrafe2.webp'],
+    'giraffe': ['images/cards/giraffe.webp', 'images/cards/giraffe2.webp'],
     'cactus': ['images/cards/cactus.webp'],
     'couple-bears': ['images/cards/couple-bears.webp'],
     'hedgehog': ['images/cards/hedgehog.webp', 'images/cards/hedgehog2.webp'],
