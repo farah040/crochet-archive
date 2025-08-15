@@ -23,7 +23,8 @@ filterButtons.forEach(button => {
             }
         });
 
-        const gallery = document.querySelector('.gallery');if(visibleCount === 1) {
+        const gallery = document.querySelector('.gallery');
+        if(visibleCount === 1) {
             gallery.classList.add('single-card');
         }
         else {
@@ -60,16 +61,20 @@ let images = []
 let currentIndex = 0;
 
 const modal = document.getElementById('modal');
-const modalImage = document.getElementById('modalImage')
-const prevBtn = document.getElementById('prevBtn')
-const nextBtn = document.getElementById('nextBtn')
-const closeBtn = document.getElementById('closeBtn')
+const modalImage = document.getElementById('modalImage');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+const closeBtn = document.getElementById('closeBtn');
 
 function showImage(index) {
     if(index < 0) index = images.length - 1; // loop to last image
     if(index >= images.length) index = 0; // loop to first image
     currentIndex = index;
     modalImage.src = images[currentIndex] // update the image src to display
+
+    document.querySelectorAll('.bullet').forEach((bullet, index) => {
+        bullet.classList.toggle('active', index === currentIndex);
+    });
 }
 
 function openModal(projectPhotos, startIndex = 0) {
@@ -89,6 +94,20 @@ function openModal(projectPhotos, startIndex = 0) {
     }
 
     modal.style.display = 'flex';
+    
+    bullets_container = document.querySelector('.bullets-container');
+    bullets_container.innerHTML = '';
+
+    images.forEach((img, index) => {
+        const bullet = document.createElement('button');
+        bullets_container.appendChild(bullet);
+        bullet.classList.add('bullet');
+
+        if(index === startIndex) {
+            bullet.classList.add('active');
+        }
+    });
+
     showImage(startIndex);
 }
 
