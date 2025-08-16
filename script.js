@@ -134,3 +134,22 @@ document.querySelectorAll('.card').forEach(card => {
         }
     });
 });
+
+scrollToTop = document.querySelector('.scroll-to-top');
+
+window.addEventListener('scroll', () =>{
+    if(window.scrollY >= 600) {
+        scrollToTop.classList.add('show');
+    }
+    else{
+        scrollToTop.classList.remove('show');
+    }
+});
+
+main = document.querySelector('main');
+scrollToTop.addEventListener('click', () => {
+    window.scrollTo({
+        top: main.offsetTop,
+        behavior: 'smooth'
+    });
+});

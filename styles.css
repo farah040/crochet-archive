@@ -10,7 +10,8 @@
 }
 
 button, 
-.card {
+.card, 
+i {
     -webkit-tap-highlight-color: transparent; 
 }
 
@@ -109,11 +110,12 @@ main {
 
 .filters .main-filters .filter-button:hover:not(.active) {
         opacity: 0.7;
-        transform: scale(0.95);
+        transform: scale(1.05);
 }
 
 .filters .main-filters .filter-button.active {
     background-color: #e89c8e;
+    transform: scale(0.95);
 }
 
 .filters .color-filters .color-button {
@@ -131,7 +133,11 @@ main {
 .color-button.brown {background-color: #B89F8A;}
 .color-button.white {background-color: #FDF9F4;}
 
-.color-button:hover {
+.color-button:hover:not(.active) {
+    transform: scale(1.05);
+}
+
+.color-button.active {
     transform: scale(0.95);
 }
 
@@ -304,16 +310,12 @@ main {
         font-size: 1.1rem;
     }
 
-    .prev { left: 15px; }
-    .next { right: 15px; }
-
     #closeBtn {
         top: 10px;
         right: 25px;
         font-size: 2.1rem;
     }
 }
-
 
 footer {
     background-color: var(--color-dark-green);
@@ -338,4 +340,47 @@ footer a {
 
 footer a:hover {
     opacity: 0.7;
+}
+
+.scroll-to-top {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    right: 40px;
+    bottom: 80px;
+    font-size: 2rem;
+    border: none;
+    border-radius: 50%;
+    padding: 0.7rem 0.8rem;
+    background-color: #e89c8e;
+    color: var(--color-cream);
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease, opacity 0.3s ease, box-shadow 0.2s ease;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .scroll-to-top:hover {
+    transform: scale(1.1);
+    background-color: var(--color-peach);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  }
+}
+
+.scroll-to-top.show {
+    visibility: visible;
+    opacity: 1;
+    animation: pop-in 0.25s ease-out;
+}
+
+@keyframes pop-in {
+    0% { transform: scale(0); opacity: 0; }
+    70% { transform: scale(1.1); opacity: 1; }
+    100% { transform: scale(1); }
+}
+
+.scroll-to-top:active {
+    transform: scale(0.9);
+    background-color: var(--color-peach);
+    box-shadow: 0 3px 6px rgba(0,0,0,0.15);
 }
